@@ -1,13 +1,15 @@
 <?php if ( ! defined( 'ABSPATH' ) ) {
 	die;
 } // Cannot access pages directly.
-// ===============================================================================================
-// -----------------------------------------------------------------------------------------------
-// FRAMEWORK OPTIONS
-// -----------------------------------------------------------------------------------------------
-// ===============================================================================================
+
+/**
+ * framework options
+ */
 $options        = array();
 
+/**
+ * assigning name, type and slug to the framwork
+ */
 $settings = array(
 	'menu_title'      => 'Theme Options',
 	'menu_type'       => 'menu', // menu, submenu, options, theme, etc.
@@ -18,10 +20,9 @@ $settings = array(
   
 );
 
-
-// ----------------------------------------
-// a option section for options container width  -
-// ----------------------------------------
+/**
+ * a option section for options container width
+ */
 $options[]      = array(
   'name'        => 'width',
   'title'       => 'Width Setting',
@@ -30,13 +31,13 @@ $options[]      = array(
   'fields'      => array(
 
     array(
-      'id'      => 'st_wrapper', // another unique id
+      'id'      => 'st_wrapper',
       'type'    => 'text',
       'title'   => 'Wrapper Width',
       'default' => '100%',
     ),
     array(
-      'id'      => 'st_container', // another unique id
+      'id'      => 'st_container',
       'type'    => 'text',
       'title'   => 'Container Width',
       'default' => '1280px',
@@ -46,21 +47,27 @@ $options[]      = array(
 );
    
 
-// ------------------------------
-// Home Page                     -
-// ------------------------------
+/**
+ * Home Page Options
+ */
 
 $options[]   = array(
   'name'     => 'st_slider',
   'title'    => 'Banner & Slider',
   'fields'   => array(
 
+    /**
+     * slider background
+     */
     array(
       'id'    => 'st_slider_bg',
       'type'  => 'upload',
       'title' => 'Slider Background',
     ),
  
+    /**
+     * color picker
+     */
     array(
       'id'      => 'st_slider_color',
       'type'    => 'color_picker',
@@ -69,6 +76,9 @@ $options[]   = array(
       'rgba'    => true,
     ),
     
+    /**
+     * to add new slides 
+     */
     array(
       'id'              => 'st_banner_slide',
       'type'            => 'group',
@@ -121,27 +131,36 @@ $options[]   = array(
 );
 
 
-// ------------------------------
-// Home Proven Technology                     -
-// ------------------------------
+/**
+ * Home (Proven Technology)
+ */
 
 $options[]   = array(
   'name'     => 'st_proven_technology',
   'title'    => 'Proven Technology',
   'fields'   => array(
 
+    /**
+     * main heading
+     */
     array(
       'id'    => 'st_proven_heading',
       'type'  => 'text',
       'title' => 'Main Heading',
     ),
 
+    /**
+     * description
+     */
     array(
       'id'    => 'st_proven_description',
       'type'  => 'textarea',
       'title' => 'Description',
     ),
 
+    /**
+     * read more button
+     */
     array(
       'id'    => 'st_read_more_text',
       'type'  => 'text',
@@ -149,6 +168,9 @@ $options[]   = array(
       'default' => "Read More"
     ),
 
+    /**
+     * read more link
+     */
     array(
       'id'    => 'st_read_more_link',
       'type'  => 'text',
@@ -156,6 +178,9 @@ $options[]   = array(
       'default' => "#"
     ),
 
+    /**
+     * adding box to showing feature things
+     */
     array(
       'id'              => 'st_proven_boxes',
       'type'            => 'group',
@@ -190,26 +215,36 @@ $options[]   = array(
 );
 
 
-// ------------------------------
-// Home How Help                     -
-// ------------------------------
+/**
+ * Home (How Helpful)
+ */
 
 $options[]   = array(
   'name'     => 'st_how_help',
   'title'    => 'How Helpful',
   'fields'   => array(
     
+    /**
+     * image
+     */
     array(
       'id'    => 'st_help_img',
       'type'  => 'upload',
       'title' => 'Image',
     ),
 
+    /**
+     * description
+     */
     array(
       'id'    => 'st_help_heading',
       'type'  => 'textarea',
       'title' => 'Description',
     ),
+
+    /**
+     * sign up button text
+     */
 
     array(
       'id'    => 'st_help_signup_text',
@@ -217,12 +252,18 @@ $options[]   = array(
       'title' => 'Sign Up Text',
     ),
 
+    /**
+     * sign up link
+     */
     array(
       'id'    => 'st_help_signup_link',
       'type'  => 'text',
       'title' => 'Sign Up Link',
     ),
 
+    /**
+     * package detail
+     */
     array(
       'id'    => 'st_help_package_deatail',
 	    'type'     => 'wysiwyg',
@@ -234,24 +275,36 @@ $options[]   = array(
       )
     ),
     
+    /**
+     * apple logo
+     */
     array(
       'id'    => 'st_help_ios_img',
       'type'  => 'upload',
       'title' => 'Apple Logo',
     ),
 
+    /**
+     * apple logo link
+     */
     array(
       'id'    => 'st_help_ios_img_link',
       'type'  => 'text',
       'title' => 'Apple Logo Link',
     ),
 
+    /**
+     * andriod logo
+     */
     array(
       'id'    => 'st_help_android_img',
       'type'  => 'upload',
       'title' => 'Android Logo',
     ),
 
+    /**
+     * andriod logo link
+     */
     array(
       'id'    => 'st_help_android_img_link',
       'type'  => 'text',
@@ -262,55 +315,65 @@ $options[]   = array(
 );
 
 
-
-// ------------------------------
-// Home Let See                     -
-// ------------------------------
+/**
+ * Home (Let See)
+ */
 
 $options[]   = array(
   'name'     => 'st_lets_see',
   'title'    => 'Lets See',
   'fields'   => array(
     
-      
+    /**
+     * main heading
+     */  
     array(
       'id'    => 'st_lets_see_main_heading',
       'type'  => 'text',
       'title' => 'Main Heading',
     ),
 
+    /**
+     * sub heading
+     */
     array(
       'id'    => 'st_lets_see_sub_heading',
       'type'  => 'text',
       'title' => 'Sub Heading',
     ),
 
+    /**
+     * short description
+     */
     array(
       'id'    => 'st_lets_see_short_description',
       'type'  => 'text',
       'title' => 'Short Description',
     ),
 
+    /**
+     * video url
+     */
     array(
       'id'    => 'st_lets_see_video',
       'type'  => 'text',
       'title' => 'Video Url',
     ),
-
-    
     
   )
 );
 
-
-// ------------------------------
-// Home Map Features                     -
-// ------------------------------
+/**
+ * Home (Map Features)
+ */
 
 $options[]   = array(
   'name'     => 'st_map_features_section',
   'title'    => 'Map Features',
   'fields'   => array(
+    /**
+     * load map option to fill content
+     */
     array(
       'id'              => 'st_map_boxes',
       'type'            => 'group',
@@ -318,19 +381,37 @@ $options[]   = array(
       'button_title'    => 'Add New Feature',
       'accordion_title' => 'Add New Feature',
       'fields'          => array(
- 
+        
+        /**
+         * icon
+         */
        array(
           'id'      => 'st_map_feature_icon',
           'type'    => 'upload',
           'title'   => 'Icon',
         ),
+
+        /**
+         * upload image
+         */
+        array(
+          'id'      => 'st_img_map',
+          'type'    => 'upload',
+          'title'   => 'Upload Image',
+        ),
         
+        /**
+         * heading
+         */
         array(
           'id'    => 'st_map_feature_heading',
           'type'  => 'text',
           'title' => 'Heading',
         ),
 
+        /**
+         * content
+         */
         array(
           'id'    => 'st_map_feature_content',
           'type'  => 'textarea',
@@ -340,11 +421,18 @@ $options[]   = array(
       ),
     ),   
 
+    /**
+     * read more
+     */
     array(
       'id'    => 'st_map_feature_read_more',
       'type'  => 'text',
       'title' => 'Read More',
     ),
+
+    /**
+     * read more link
+     */
 
     array(
       'id'    => 'st_map_feature_read_more_link',
@@ -352,12 +440,18 @@ $options[]   = array(
       'title' => 'Read More Link',
     ),
 
+    /**
+     * sign up button text
+     */
     array(
       'id'    => 'st_map_feature_signup',
       'type'  => 'text',
       'title' => 'Sign Up',
     ),
 
+    /**
+     * sign up link
+     */
     array(
       'id'    => 'st_map_feature_signup_link',
       'type'  => 'text',
@@ -368,21 +462,27 @@ $options[]   = array(
 
  
 
-
-// ------------------------------
-// Home Catch  More                    -
-// ------------------------------
+/**
+ * Home (Catch  More)
+ */
 
 $options[]   = array(
   'name'     => 'st_catch_more_section',
   'title'    => 'Catch More',
   'fields'   => array(
-  
+
+    /**
+     * title
+     */
     array(
       'id'    => 'st_catch_more_title',
       'type'  => 'text',
       'title' => 'Title',
     ),
+
+    /**
+     * description
+     */
     array(
       'id'    => 'st_catch_more_short_desc',
       'type'  => 'textarea',
@@ -409,14 +509,37 @@ $options[]   = array(
   )
 );
 
-// ------------------------------
-//  FAQS                      -
-// ------------------------------
+
+/**
+ * FAQS
+ */
 
 $options[]   = array(
   'name'     => 'st_faqs_section',
   'title'    => 'FAQS Page',
   'fields'   => array(
+
+    /**
+     * heading
+     */
+    array(
+      'id'    => 'st_faqs_heading',
+      'type'  => 'text',
+      'title' => 'Main Heading',
+    ),
+
+    /**
+     * desription
+     */
+    array(
+      'id'    => 'st_faqs_description',
+      'type'  => 'textarea',
+      'title' => 'Description',
+    ),
+
+    /**
+     * adding new faq's
+     */
 
     array(
       'id'              => 'st_faqs',
@@ -443,9 +566,9 @@ $options[]   = array(
   )
 );
 
-// ------------------------------
-//  Auth Section                      -
-// ------------------------------
+/**
+ * Auth Section
+ */
 
 $options[]   = array(
   'name'     => 'st_auth_section',
@@ -461,10 +584,9 @@ $options[]   = array(
   )
 );
 
-
-// ------------------------------
-//  Membership Page                      -
-// ------------------------------
+/**
+ * Membership Page
+ */
 
 $options[]   = array(
   'name'     => 'st_membership_section',
@@ -479,16 +601,25 @@ $options[]   = array(
       'accordion_title' => 'Add New Membership',
       'fields'          => array(
  
+        /**
+         * subscription title
+         */
           array(
             'id'    => 'st_membership_subscription',
             'type'  => 'text',
             'title' => 'Subscription Title',
           ),
+          /**
+           * currency
+           */
           array(
             'id'    => 'st_membership_currency',
             'type'  => 'text',
             'title' => 'Currency',
           ),
+          /**
+           * price
+           */
           array(
             'id'    => 'st_membership_price',
             'type'  => 'number',
@@ -499,23 +630,37 @@ $options[]   = array(
             'type'  => 'number',
             'title' => 'Decimals',
           ),
+
+          /**
+           * sign up
+           */
           array(
             'id'    => 'st_membership_signup',
             'type'  => 'text',
             'title' => 'Sign up',
           ),
 
+          /**
+           * sign up link
+           */
           array(
             'id'    => 'st_membership_signup_link',
             'type'  => 'text',
             'title' => 'Sign up Link',
           ),
 
+          /**
+           * description
+           */
           array(
             'id'    => 'st_membership_short_desc',
             'type'  => 'text',
             'title' => 'Short Description',
           ),
+
+          /**
+           * enable and disable modules
+           */
 
           array(
             'id'             => 'sorter_1',
@@ -541,28 +686,36 @@ $options[]   = array(
   )
 );
 
-
-// ------------------------------
-// Home   Subscribe   Story                -
-// ------------------------------
+/**
+ * Home (Subscribe Story)
+ */
 
 $options[]   = array(
   'name'     => 'st_subscribe',
   'title'    => 'Subscribe',
   'fields'   => array(
    
+    /**
+     * image
+     */
     array(
       'id'    => 'st_subscribe_user_img',
       'type'  => 'upload',          
       'title' => 'User Image',
      ),
 
+     /**
+      * title
+      */
     array(
       'id'    => 'st_subscribe_title',
       'type'  => 'text',
       'title' => 'Title',
     ),
 
+    /**
+     * content
+     */
     array(
       'id'       => 'st_subscribe_content',
       'type'     => 'wysiwyg',
@@ -574,11 +727,18 @@ $options[]   = array(
       )
     ),
  
+    /**
+     * read more button
+     */
     array(
       'id'    => 'st_subscribe_read_more',
       'type'  => 'text',
       'title' => 'Read More',
     ),
+
+    /**
+     * read more button link
+     */
     array(
       'id'    => 'st_subscribe_read_more_link',
       'type'  => 'text',
@@ -589,28 +749,36 @@ $options[]   = array(
 );
 
 
-
-// ------------------------------
-// Home   Download  Satfish                -
-// ------------------------------
+/**
+ * Home (Download Satfish)
+ */
 
 $options[]   = array(
   'name'     => 'st_download_satfish_section',
   'title'    => 'Download Satfish',
   'fields'   => array(
-   
+
+    /**
+     * image
+     */
     array(
       'id'    => 'st_download_satfish_img',
       'type'  => 'upload',          
       'title' => 'Image',
      ),
 
+     /**
+      * title
+      */
     array(
       'id'    => 'st_download_satfish_title',
       'type'  => 'text',
       'title' => 'Title',
     ),
 
+    /**
+     * content
+     */
     array(
       'id'       => 'st_download_satfish_content',
       'type'     => 'wysiwyg',
@@ -626,34 +794,55 @@ $options[]   = array(
   )
 );
 
-
-// ------------------------------
-//  Footer                      -
-// ------------------------------
+/**
+ * Footer
+ */
 
 $options[]   = array(
   'name'     => 'st_footer',
   'title'    => 'Footer',
   'fields'   => array(
-  
+
+    /**
+     * logo
+     */
     array(
       'id'    => 'st_footer_logo',
       'type'  => 'upload',
       'title' => 'Logo',
     ),
 
+    /**
+     * title
+     */
     array(
       'id'    => 'st_footer_package_title',
       'type'  => 'text',
       'title' => 'Package Title',
     ),
 
+    /**
+     * rate
+     */
     array(
       'id'    => 'st_footer_package_per_year',
       'type'  => 'text',
       'title' => 'Package Rate',
     ),
 
+    /**
+     * sign up button text
+     */
+
+    array(
+      'id'    => 'st_signup_text',
+      'type'  => 'text',
+      'title' => 'Sign Up Text',
+    ),
+
+    /**
+     * footer icons
+     */
     array(
       'id'    => 'st_footer_icon',
       'type'  => 'icon',
@@ -697,11 +886,15 @@ $options[]   = array(
       'default' => "fa fa-youtube-play"
     ),
     array(
-      'id'    => 'st_footer_icon2_link',
+      'id'    => 'st_footer_icon3_link',
       'type'  => 'text',
       'title' => 'Link',
       'default' => "https://www.youtube.com"
     ),
+
+    /**
+     * copyright text
+     */
     array(
       'id'       => 'st_footer_copyright',
       'type'     => 'wysiwyg',
